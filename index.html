@@ -23,7 +23,7 @@
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         }
 
-        .header, .services, .contact, .map, .gallery {
+        .services, .contact, .map, .gallery {
             text-align: center;
             opacity: 0;
             transform: translateY(50px);
@@ -184,7 +184,7 @@
 
     <script>
         window.addEventListener('scroll', function () {
-            let elements = document.querySelectorAll('.header, .services, .contact, .map, .gallery');
+            let elements = document.querySelectorAll('.services, .contact, .map, .gallery');
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
             elements.forEach(function (element) {
