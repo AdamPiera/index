@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usługi Dotacji Rolniczych</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, rgba(255,255,255,0.6), rgba(0,0,0,0.6)), url('./andrea-cairone-53ark9ceU8A-unsplash.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-item, .contact, .map, .gallery {
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            color: #00FFFF; /* CMYK - Cyan */
+        }
+
+        .header p {
+            font-size: 1.5rem;
+            color: #FF00FF; /* CMYK - Magenta */
+        }
+
+        .services h2, .contact h2, .gallery h2 {
+            color: #FFFF00; /* CMYK - Yellow */
+        }
+
+        .service-item {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #000; /* Black */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .map iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 10px 0;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container {
+            text-align: left;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #000; /* Black */
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        @media (min-width: 768px) {
+            .services, .contact, .map, .gallery {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .service-item {
+                width: 30%;
+            }
+
+            .gallery img {
+                width: 30%;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="glass header">
+        <p>strona powstała w celach humorystycznych!!!</p>
+        <h1>Album zdjęciowy Wojtka</h1>
+    </div>
+
+    <div class="glass services">
+        <h2>Zdjęcia</h2>
+        <div class="service-item">
+
+        <img src="erik-witsoe-F6pjigel75M-unsplash.jpg" alt="Maszyna Rolnicza">
+        <img src="andrea-cairone-53ark9ceU8A-unsplash.jpg" alt="Maszyna Rolnicza">
+        <img src="erik-witsoe-F6pjigel75M-unsplash.jpg" alt="Maszyna Rolnicza">
+        <img src="erik-witsoe-F6pjigel75M-unsplash.jpg" alt="Maszyna Rolnicza">
+        <img src="erik-witsoe-F6pjigel75M-unsplash.jpg" alt="Maszyna Rolnicza">
+        <img src="erik-witsoe-F6pjigel75M-unsplash.jpg" alt="Maszyna Rolnicza">
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            let elements = document.querySelectorAll('.service-item, .contact, .map, .gallery');
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            elements.forEach(function (element) {
+                let elementPosition = element.offsetTop;
+                if (scrollTop + window.innerHeight - 100 > elementPosition) {
+                    element.style.opacity = 1;
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
