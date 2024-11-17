@@ -10,22 +10,26 @@
         <meta name="description" content="Kompleksowe przygotowywanie wniosków do ARiMR o dotacje unijne dla rolników. Doradztwo w zakresie funduszy unijnych z PROW. Zasięg ogólnopolski. Atrakcyjne ceny.">
     </head>
     <body>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init();
-        </script>
+        </script> -->
         <header class="navigation" id="0">
-            <nav>
-                <a href="#0">Strona Główna</a>
-                <a href="#1">O Firmie</a>
-                <a href="#2">Kontakt</a>
-                <a href="#3">Cennik</a>
-                <a href="#4">Programy</a>
-                <a href="#5">Formularze</a>
-            </nav>
+            <div>
+                <img src="/icons/menu.png" alt="">
+                <nav>
+                    <a href="#0">Strona Główna</a>
+                    <a href="#1">O Firmie</a>
+                    <a href="#2">Kontakt</a>
+                    <a href="#3">Cennik</a>
+                    <a href="#4">Programy</a>
+                    <a href="#5">Formularze</a>
+                </nav>
+            </div>
         </header>
         <header class="header-image">
-            <img src="images/header.jpg" id="bottom-header" >
+            <img src="/images/header.jpg" id="bottom-header">
+            <img src="/images/1header.png" id="mobile-header">
             <div id="text">
                 <p>
                     <b>Kompleksowe przygotowanie wniosków<br>
@@ -37,8 +41,7 @@
                         Wszystkie dotychczasowo realizowane projekty otrzymały planowane dofinasowanie.</p>
                 </div>
             </div>
-        </header>  
-        <main>
+
             <div class="windows">
                 <div class="item">
                     <img src="icons/wnioski.png" alt="" class="icon">
@@ -54,7 +57,7 @@
                 </div>
                 <div class="item">
                     <img src="icons/profesjonalizm.png" class="icon">
-                    <p>profesjonalizm</p>
+                    <p>Profesjonalizm</p>
                 </div>
                 <div class="item">
                     <img src="icons/poland.png" alt="" class="icon">
@@ -65,22 +68,24 @@
                     <p>Atrakcyjne ceny</p>
                 </div>
             </div>
+        </header>  
+        <main>
             <div class="motto">
-                <p id="third" data-aos="fade-up" data-aos-offset="200">Nie jesteś pewien, czy kwalifikujesz się do uzyskania dotacji z wybranego programu...
+                <p id="third">Nie jesteś pewien, czy kwalifikujesz się do uzyskania dotacji z wybranego programu...
                       <a href="#2" class="phone">Zadzwoń</a>, podczas rozmowy weryfikacyjnej ustalimy, czy spełniasz kryteria wymagane przez ARiMR.
                 </p>
-                <img src="images/documents2.jpg" alt="" id="document-img" data-aos="fade-left" data-aos-duration="1000">
+                <img src="images/documents2.jpg" alt="" id="document-img">
             </div>
             <div class="between about-company" id="1">
-                <h1 data-aos="fade-up" data-aos-duration="1000">O Firmie</h1>
-                <p data-aos="fade-up" data-aos-offset="200">Firma Altix Adam Piera zajmuje się przygotowywaniem wniosków o dotacje unijne z Programu Rozwoju Obszarów Wiejskich (PROW) od 2004 roku. Oferta skierowana jest do rolników i przedsiębiorców zajmujących się działalnością rolniczą.
+                <h1>O Firmie</h1>
+                <p>Firma Altix Adam Piera zajmuje się przygotowywaniem wniosków o dotacje unijne z Programu Rozwoju Obszarów Wiejskich (PROW) od 2004 roku. Oferta skierowana jest do rolników i przedsiębiorców zajmujących się działalnością rolniczą.
                 Biuro firmy znajduje się w Czarnocinie (województwo łódzkie), ale możliwe jest przygotowanie wniosku zdalnie dla klientów z całej Polski.
                 Aktualnie obowiązuje nowy program dotacji: Plan Strategiczny dla Wspólnej Polityki Regionalnej na lata 2023 - 2027 (zastąpił on PROW).
                 Do tej pory firma zrelizowała ponad tysiąc projektów, które zakończyły się uzyskaniem dofinasowania z ARiMR.</p>
                    
             </div>
             <div class="contact" id="2">
-                <iframe data-aos="fade-right" data-aos-duration="1000" class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2478.199750067575!2d19.6766248!3d51.60122849999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471a2ed3561c8595%3A0xf459ca17c63f5968!2sINVEST-ROL%20Sp.%20z%20o.o.!5e0!3m2!1spl!2spl!4v1723901248940!5m2!1spl!2spl"
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2478.199750067575!2d19.6766248!3d51.60122849999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471a2ed3561c8595%3A0xf459ca17c63f5968!2sINVEST-ROL%20Sp.%20z%20o.o.!5e0!3m2!1spl!2spl!4v1723901248940!5m2!1spl!2spl"
                  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <div class="info">
                     <h1>Kontakt</h1>
@@ -91,12 +96,12 @@
                 </div>
             </div>
             <div class="between" id="3">
-                <h1 data-aos="fade-up" data-aos-duration="1000">Cennik</h1>
-                <p data-aos="fade-up" data-aos-offset="200">Koszt kompleksowego przygotowania wniosku do ARiMR jest ustalany indywidualnie po rozmowie weryfikacyjnej
+                <h1>Cennik</h1>
+                <p>Koszt kompleksowego przygotowania wniosku do ARiMR jest ustalany indywidualnie po rozmowie weryfikacyjnej
                     i zależy od całkowitej wartości planowanej inwestycji. Oferujemy atrakcyjne ceny.</p>
             </div>
             <div class="programs-container" id="4">
-                <div class="program" data-aos="fade-right" data-aos-duration="600">
+                <div class="program">
                     <img src="images/003.jpg" alt="" class="miniatura">
                     <div class="description">
                         <h2>Rozwój małych gospodarstw rolnych</h2>
@@ -114,7 +119,7 @@
                         <a href="https://www.gov.pl/web/arimr/regulamin-naboru-wnioskow-dla-interwencji-i105-w-ramach-ps-wpr-na-lata-2023-2027" >Szczegółowe informacje o programie</a>
                     </div>
                 </div>
-                <div class="program" data-aos="fade-left" data-aos-offset="400" data-aos-duration="600">
+                <div class="program">
                     <img src="images/money.jpg" alt="" class="miniatura">
                     <div class="description">
                         <h2>Premie dla młodych rolników</h2>
