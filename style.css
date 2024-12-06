@@ -592,6 +592,7 @@ footer {
 
     .navigation a {
         width: 200%;
+        margin-bottom: 6px;
     }
 
     .navigation a:hover {
