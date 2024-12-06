@@ -37,7 +37,7 @@
 
     --between-paragraph-font-size-big: 1vw;
     --between-paragraph-font-size-medium: 1.7vw;
-    --between-paragraph-font-size-small: 3.4vw;   /* Do ustawienia*/
+    --between-paragraph-font-size-small: 3.7vw;   /* Do ustawienia*/
 
     --info-h1-font-size-big: 2.475vw;
     --info-h1-font-size-medium: 3.2vw;
@@ -518,7 +518,7 @@ footer {
 
     .between p{
         font-size: var(--between-paragraph-font-size-small);
-        line-height: 5.4vw;
+        line-height: 6vw;
     }
 
     .item p {
