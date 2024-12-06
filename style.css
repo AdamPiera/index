@@ -10,6 +10,7 @@
     --white: #ffffff;
     --orwhite: #fffaf3;
 
+
     --navigation-bar-font-size-big: 18px;
     --navigation-bar-font-size-medium: 16px;
     --navigation-bar-font-size-small: 4.3vw;   /* Do ustawienia*/
@@ -26,7 +27,7 @@
     --text-header-font-size-medium: 2.7vw;
     --text-header-font-size-small: 6.7vw;   /* Do ustawienia*/
 
-    --motto-font-size-big: 1.5vw;
+    --motto-font-size-big: 1.4vw;
     --motto-font-size-medium: 2.1vw;
     --motto-font-size-small: 5vw;   /* Do ustawienia*/
 
@@ -34,7 +35,7 @@
     --between-h1-font-size-medium: 2.875vw;
     --between-h1-font-size-small: 7vw;   /* Do ustawienia*/
 
-    --between-paragraph-font-size-big: 1.1vw;
+    --between-paragraph-font-size-big: 1vw;
     --between-paragraph-font-size-medium: 1.7vw;
     --between-paragraph-font-size-small: 3.4vw;   /* Do ustawienia*/
 
@@ -410,7 +411,7 @@ footer {
 
 
 
-@media screen and (max-width: 605px){
+@media screen and (max-width: 620px){
 
     .program p {
         font-size: 3.2vw;
@@ -559,7 +560,7 @@ footer {
         position: relative;
         top: -165vw;
         left: 47.2%;
-        boreder-radius: 22px;
+        border-radius: 5.5vw;
     }
 
     #text p b{
@@ -580,12 +581,17 @@ footer {
 
     .navigation {
         font-size: var(--navigation-bar-font-size-small);
-        padding: 0px 0px;
+        padding: 10px 0px;
         margin-top: -10px;
     }
 
-    .navigation a {
+    .navigation nav {
         display: none;
+        width: 100%;
+    }
+
+    .navigation a {
+        width: 200%;
     }
 
     .navigation a:hover {
@@ -594,7 +600,8 @@ footer {
     }
     
     .navigation div {
-        display: inline;
+        display: block;
+        width: 40%;
     }
 
     .navigation div img {
@@ -614,13 +621,16 @@ footer {
         padding-bottom: 100px; */
     }
 
-    .navigation div:hover nav a{
+    .navigation div:hover nav{
         transition: 0.3s;
         display: block;
-        margin: 0px 70px;
         padding: 5px 0px;
         margin-bottom: 12px;
         position: relative;
-        
+    }
+
+    .navigation a {
+        display: block;
+        margin: 0px 10vw;
     }
 }
