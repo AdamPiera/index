@@ -3,31 +3,14 @@
 :root {
     --background: #D3DAE2;
     --background2: #C5CCCD;
+    --navbar: #e0e7e9;
     --other: #0F2B36;
 
-    /* for screen */
     --font-size-h1-screen: 75px;
     --font-size-h2-screen: 65px;
     --font-size-h3-screen: 50px;
     --font-size-paragraph-screen1: 18px;
     --font-size-paragraph-screen2: 16px;
-    --font-size-paragraph-screen3: 14px;
-
-    /* for tablet */
-    --font-size-h1-tablet: 75px;
-    --font-size-h2-tablet: 70px;
-    --font-size-h3-tablet: 50px;
-    --font-size-paragraph-tablet1: 18px;
-    --font-size-paragraph-tablet2: 16px;
-    --font-size-paragraph-tablet3: 14px;
-
-    /* for moblie */
-    --font-size-h1-moblie: 75px;
-    --font-size-h2-moblie: 70px;
-    --font-size-h3-moblie: 50px;
-    --font-size-paragraph-moblie1: 18px;
-    --font-size-paragraph-moblie2: 16px;
-    --font-size-paragraph-moblie3: 14px;
 }
 
 html {
@@ -52,9 +35,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0px;
-    background-color: rgba(216, 225, 235, .7);
-    backdrop-filter: blur(25px);
+    padding: 20px 0px;
+    background-color: var(--navbar); /* rgba(216, 225, 235, .95) */
+    backdrop-filter: blur(10px);
+    z-index: 999;
 }
 
 header img {
@@ -63,14 +47,24 @@ header img {
     padding-left: 40px;
 }
 
-nav {
+.menu {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+    text-decoration: none;
     display: inline;
     padding: 25px;
     color: #000;
     font-size: var(--font-size-paragraph-screen2);
 }
 
-nav a {
+li {
+    display: inline;
+}
+
+ul a {
     color: #000;
     text-decoration: none;
     font-weight: 700;
@@ -79,7 +73,7 @@ nav a {
     transition: 0.2s;
 }
 
-nav a:hover {
+ul a:hover {
     background-color: rgba(197, 204, 205, .8);
 }
 
@@ -220,12 +214,20 @@ nav a:hover {
     margin: 0px 17px;
     margin-bottom: 30px;
     box-shadow: 12px 12px #868b8b;
+    border-radius: 15px;
+}
+
+.miniaturaMobile {
+    display: none;
+    width: 0;
+    height: 0;
 }
 
 .miniatura {
     width: calc(100% - 20px);
     max-width: 250px;
     height: 100%;
+    border-radius: 15px;
 }
 
 .program-text {
@@ -271,6 +273,11 @@ nav a:hover {
     color: #000;
     font-weight: 600;
     cursor: pointer;
+}
+
+.program button:active {
+    color: #fff;
+    font-weight: 400;
 }
 
 .cennik {
@@ -336,10 +343,6 @@ input::placeholder,textarea::placeholder{
     font-size: var(--font-size-paragraph-screen3);
 }
 
-input:checked {
-    background-color: #000;
-}
-
 input[type=submit] {
     width: 110px;
     padding: 15px 25px;
@@ -354,6 +357,11 @@ input[type=submit]:hover {
     background-color: var(--background2);
     color: #000;
     cursor: pointer;
+}
+
+input[type=submit]:active {
+    background-color: var(--background);
+    color: #868b8b;
 }
 
 .contactIds h2 {
@@ -424,7 +432,12 @@ footer p {
 
 
 
+
 @media screen and (max-width: 1268px){
+    .program-text button {
+        font-size: 14px;
+    }
+
     footer {
         bottom: -4600px;
     }
@@ -512,7 +525,13 @@ footer p {
 
     .program-text button {
         margin: 0 auto 40px auto;
+        font-size: 15px;
+    }
 
+    .program-text button:active {
+        font-size: 15px;
+        color: #fff;
+        font-weight: 400;
     }
 
     .cennik h1 {
@@ -617,6 +636,11 @@ footer p {
         min-height: 100px;
     }
 
+    .description {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
     .cennik {
         position: relative;
         left: 50%;
@@ -627,73 +651,386 @@ footer p {
     .cennik p {
         width: 100%;
     }
+
+    .contactIds {
+        margin: 0;
+    }
+
+    .item button:hover {
+        background-color: var(--background2);
+    }
 }
 
 @media screen and (max-width: 650px) {
+    main {
+        width: 100%;
+    }
+
+    .headerImg {
+        width: 95%;
+    }
+
+    .aboutComapny {
+        height: 700px;
+    }
+
+    header {
+        padding: 0;
+        height: 80px;
+    }
+
+    header img {
+        display: none;
+    }
+
+    .dropdown {
+        padding-top: 10px;
+        display: block;
+        width: 100%;
+        position: relative;
+        z-index: 999;
+        backdrop-filter: blur(40px);
+    }
+
+    ul {
+        z-index: 3;
+        position: absolute;
+        padding: 20px 0;
+        top: 70px;
+        margin: 0;
+        width: 100%;
+        background-color: var(--navbar); /* rgba(216, 225, 234) */
+        backdrop-filter: blur(40px);
+        display: none;
+    }
+
+    ul a {
+        display: block;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        width: 150px;
+        padding: 5px;
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+
+    .logoMobile {
+        position: absolute;
+        width: 80px;
+        height: 30px;
+    }
+
+    .menu {
+        display: inline;
+        width: 40px;
+        height: 40px;
+        padding: 8px 10px;
+        margin-left: 25px;
+        transition: .2s;
+        border-radius: 10px;
+    }
+
+    .dropdown .menu:focus + ul,
+    .dropdown:hover ul,
+    .dropdown ul:hover{
+        display: block;
+    }
+
+    .menu:hover {
+        background-color: var(--background);
+    }
+
+    .menu:hover nav {
+        display: block;
+    }
+
+    #title {
+        width: calc(100% - 80px);
+        padding: 0;
+        font-size: 50px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        padding-top: 50px;
+        line-height: 35px;
+    }
+
+    .programs {
+        width: 100%;
+        min-width: 300px;
+    }
+
+    .container {
+        width: calc(100% - 80px);
+        padding: 0;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
     .program {
+        width: 100%;
         height: 450px;
+        margin: 0;
+        margin-bottom: 80px;
+        grid-template-columns: 100%;
+        grid-template-rows: 40% 60%;
+    }
+
+    .program-text {
+        align-items: center;
     }
 
     .program .title {
-        margin-top: 20px;
+        text-align: center;
+        width: 95%;
+        margin-top: 30px;
+        margin-left: 0;
         margin-bottom: 0;
     }
 
     .description {
-        font-size: 16px;
-        margin-bottom: 0;
+        margin: 0;
+        width: 90%;
+        text-align: center;
+    }
+
+    .miniaturaMobile {
+        display: inline;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 15px;
     }
 
     .miniatura {
-        height: 450px;
+        display: none;
+        background-image: url(img/premie2.png);
+        background-size: contain;
+        height: 100%;
+        /* object-fit: cover; */
+        max-width: 1000px;
+        width: 100%;
+    }
+
+    .item {
+        margin-left: 50px;
     }
     
     .program button {
-        margin-bottom: 15px;
+        margin: 0;
+        margin-bottom: 25px;
     }
 
     .contactIds {
-        margin-left: 90px;
+        width: 100%;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .contact h2 {
+        width: 150px;
+        text-align: center;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .contact p {
+        width: 200px;
+        font-size: 16px;
+        text-align: center;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .item {
+        width: calc(100% - 60px);
+        margin-left: 0;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
     }
 
     .value {
-        width: 420px;
+        width: calc(100%-30px);
     }
 }
 
+@media screen and (max-width: 545px) {
+    ul a {
+        font-size: 16px;
+    }
 
+    .hero {
+        padding: 0;
+        padding-top: 180px;
+    }
 
+    .heroTextContainer h1 {
+        font-size: 50px;
+        line-height: 38px;
+        width: 95%;
+        margin-bottom: 12px;
+    }
 
+    .hero .text {
+        margin-top: 0;
+        font-size: 16px;
+        line-height: 22px;
+        width: 85%;
+    }
 
+    .aboutComapny {
+        width: 95%;
+        margin: 0;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        margin-top: 35px;
+    }
 
+    .documents {
+        margin-top: 150px;
+        padding-top: 0;
+    }
 
+    .icons {
+        grid-template-columns: 1fr 1fr;
+        padding-bottom: 150px;
+    }
 
+    .element {
+        margin-bottom: 30px;
+    }
 
+    .element p {
+        font-size: 15px;
+        line-height: 18px;
+    }
 
+    .icon {
+        width: 80px;
+        height: 80px;
+        margin-left: 38px;
+    }
 
+    #title {
+        font-size: 45px;
+        line-height: 30px;
+        width: 90%;
+    }
 
+    .container {
+        width: 90%;
+    }
 
+    .program {
+        height: 700px;
+        box-shadow: none;
+    }
 
+    .cennik h2 {
+        font-size: 60px;
+    }
 
+    .cennik p {
+        font-size: 16px;
+    }
 
-/*First pallete*/
-    /* --color1-1: #4C585B;
-    --color1-11: rgba(76, 88, 91, 0.6);
-    --color1-2: #7E99A3;
-    --color1-3: #A5BFCC;
-    --color1-4: #F4EDD3;
-    /*Second pallete*/
-    /* --color2-1: #213555;
-    --color2-2: #3E5879;
-    --color2-3: #D8C4B6;
-    --color2-4: #F5EFE7; */
-    /*Third pallete*/
-    /* --color3-1: #FAFFC5;
-    --color3-2: #A9BFA8;
-    --color3-3: #5E686D;
-    --color3-4: #3A3960; */
-    /*Fourth pallete*/
-    /* --color4-1: #F8FAFC;
-    --color4-2: #D9EAFD;
-    --color4-3: #BCCCDC;
-    --color4-4: #9AA6B2; */
+    .formTitile {
+        width: 95%;
+        text-align: center;
+        font-size: 60px;
+    }
+
+    input[type=text],
+    input[type=email],
+    textarea {
+        padding: 15px 20px;
+        display: block;
+    }
+
+    input::placeholder,textarea::placeholder {
+        font-size: 12px;
+    }
+
+    input[type=submit] {
+        font-size: 13px;
+    }
+
+    .contactIds h2 {
+        font-size: 55px;
+    }
+
+    .contactIds p {
+        font-size: 15px;
+    }
+
+    .contactIds button {
+        width: 60px;
+        height: 60px;
+    }
+
+    .item button img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .item a {
+        font-size: 16px;
+        margin-left: 15px;
+    }
+
+    footer p{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    ul a {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .aboutComapny {
+        height: 700px;
+    }
+
+    .aboutCompanyText {
+        width: 90%;
+    }
+
+    .icon {
+        width: 65px;
+        height: 65px;
+        margin-left: 35px;
+    }
+
+    .element {
+        width: 100%;
+    }
+
+    .element p {
+        font-size: 14px;
+    } 
+
+    .container {
+        width: 100%;
+    }
+
+    .form {
+        min-width: 300px;
+        width: 100%;
+    }
+
+    input[type=text],
+    input[type=email],
+    textarea {
+        width: calc(100% - 60px);
+    }
+}
