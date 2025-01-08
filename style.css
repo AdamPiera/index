@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Gidugu&family=Inter:opsz,wght@14..32,100..900&display=swap');
 
 :root {
-    --background: #d9e1e7;
+    /* --background: #d9e1e7;
     --background2: #e1e6e9;
     --navbar: #dfe6e7;
-    --other: #15313d;
+    --other: #15313d; */
     --hover: #d1dadd;
-/* 
+
     --background: #D3DAE2;
     --background2: #C5CCCD;
     --navbar: #e0e7e9;
-    --other: #0F2B36; */
+    --other: #0F2B36;
 
     --font-size-h1-screen: 75px;
     --font-size-h2-screen: 65px;
@@ -63,10 +63,12 @@ ul {
     display: inline;
     color: #000;
     font-size: var(--font-size-paragraph-screen2);
+    margin-right: 30px;
 }
 
 li {
     display: inline;
+    margin-right: 5px;
 }
 
 ul a {
@@ -123,6 +125,7 @@ ul a:active {
 .aboutComapny {
     background-image: url(img/dron.jpg);
     background-size: cover;
+    background-position: 30% 50%;
     height: 500px;
     border-radius: 30px;
     margin: 140px 35px 0px 35px;
@@ -264,9 +267,9 @@ ul a:active {
     margin-bottom: 100px;
 }
 
-.program button {
+.program a{
+    padding: 15px 5px;
     display: block;
-    height: 50px;
     background-color: var(--other);
     color: #fff;
     border: none;
@@ -277,16 +280,18 @@ ul a:active {
     margin-right: 20px;
     transition: .3s;
     font-weight: 500;
+    text-decoration: none;
+    text-align: center;
 }
 
-.program button:hover {
+.program a:hover {
     background-color: var(--navbar);
     color: #000;
     font-weight: 600;
     cursor: pointer;
 }
 
-.program button:active {
+.program a:active {
     color: #000;
     background-color: #ffffff;
     border: 1px solid var(--other);
@@ -374,6 +379,7 @@ input[type=submit]:hover {
 input[type=submit]:active {
     background-color: #fff;
     color: #000;
+    z-index: 998;
 }
 
 .contactIds h2 {
@@ -433,6 +439,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 30px 0px;
+    z-index: -1;
 }
 
 footer p {
@@ -446,7 +453,7 @@ footer p {
 
 
 @media screen and (max-width: 1268px){
-    .program-text button {
+    .program-text a {
         font-size: 14px;
     }
 
@@ -535,12 +542,8 @@ footer p {
         margin: 0 20px 100px 50px;
     }
 
-    .program-text button {
+    .program-text a {
         margin: 0 auto 40px auto;
-        font-size: 15px;
-    }
-
-    .program-text button:active {
         font-size: 15px;
     }
 
@@ -829,7 +832,7 @@ footer p {
         margin-left: 50px;
     }
     
-    .program button {
+    .program a {
         margin: 0;
         margin-bottom: 25px;
     }
@@ -1043,4 +1046,99 @@ footer p {
     textarea {
         width: calc(100% - 60px);
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MORE */
+
+.moreHero {
+    margin-top: 80px;
+    width: 100%;
+    height: 500px;
+    background: url(/img/premieMobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    font-family: 'Gidugu';
+    width: 100%;
+    text-align: center;
+}
+
+.heroText {
+    position: relative;
+    left: 50%;
+    top: calc(50% - 20px);
+    height: 400px;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    backdrop-filter: blur(4px);
+    width: 900px;
+    background-color: #1b1b1b6c;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.heroText h1 {
+    font-size: 80px;
+    padding-bottom: 80px;
+    font-weight: 590;
+    margin: 0;
+    line-height: 50px;
+}
+
+.heroText h2 {
+    line-height: 30px;
+    font-size: 50px;
+    padding-bottom: 20px;
+    margin: 0;
+    font-weight: 390;
+}
+
+.heroText p {
+    width: 85%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 0;
+    font-family: 'Inter';
+    font-size: 17px;
+}
+
+.moreIcons {
+    background-color: var(--background2);
+    margin-top: -30px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    width: calc(100% -4 0px);
+    padding: 120px 20px;
+}
+
+.moreElement {
+    display: flex;
+    align-items: center;
+}
+
+.moreElement p {
+    font-size: 17px;
+    margin-left: 40px;
+    font-weight: 500;
+}
+
+.moreIcon {
+    width: 110px;
 }
