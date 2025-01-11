@@ -10,7 +10,7 @@
     --background: #D3DAE2;
     --background2: #C5CCCD;
     --navbar: #e0e7e9;
-    --other: #0F2B36;
+    --other: #0d3241;
 
     --font-size-h1-screen: 75px;
     --font-size-h2-screen: 65px;
@@ -377,6 +377,7 @@ input[type=submit]:hover {
 
 input[type=submit]:active {
     background-color: #fff;
+    border: 1px solid #000;
     color: #000;
     z-index: 998;
 }
@@ -1071,7 +1072,7 @@ footer p {
     width: 100%;
     height: 500px;
     border-radius: 30px;
-    background: url(img/premieMobile.png);
+    background: url(/img/premieMobile.png);
     background-size: cover;
     background-repeat: no-repeat;
     object-fit: cover;
@@ -1218,9 +1219,15 @@ footer p {
     padding: 15px 23px;
 }
 
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    content: '';
+    color: var(--other);
+}
+
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-    background-color: #00000044;
+    background-color: #0000002d;
 }
 
 .swipper {
@@ -1473,5 +1480,10 @@ footer p {
     .moreElement p {
         margin: 20px 0;
         font-size: 14px;
+    }
+
+    .moreProgram-text a {
+        font-size: 14px;
+        margin-top: 30px;
     }
 }
