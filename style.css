@@ -57,10 +57,9 @@ header img {
     display: none;
 }
 
-ul {
+header ul {
     list-style-type: none;
     text-decoration: none;
-    display: inline;
     color: #000;
     font-size: var(--font-size-paragraph-screen2);
     margin-right: 30px;
@@ -71,7 +70,7 @@ li {
     margin-right: 5px;
 }
 
-ul a {
+header ul a {
     color: #000;
     text-decoration: none;
     font-weight: 700;
@@ -80,12 +79,12 @@ ul a {
     transition: 0.2s;
 }
 
-ul a:hover {
+header ul a:hover {
     background-color: var(--other);
     color: #fff;
 }
 
-ul a:active {
+header ul a:active {
     background-color: var(--hover);
     color: #000;
 }
@@ -705,8 +704,8 @@ footer p {
         backdrop-filter: blur(40px);
     }
 
-    ul {
-        z-index: 3;
+    header ul {
+        z-index: 998;
         position: absolute;
         padding: 10px 0;
         top: 70px;
@@ -717,7 +716,7 @@ footer p {
         display: none;
     }
 
-    ul a {
+    header ul a {
         display: block;
         position: relative;
         left: 50%;
@@ -745,9 +744,9 @@ footer p {
         border-radius: 10px;
     }
 
-    .dropdown .menu:focus + ul,
+    .dropdown .menu:focus + header ul,
     .dropdown:hover ul,
-    .dropdown ul:hover{
+    .dropdown header ul:hover{
         display: block;
     }
 
@@ -772,7 +771,6 @@ footer p {
 
     .programs {
         width: 100%;
-        min-width: 300px;
     }
 
     .container {
@@ -1061,13 +1059,19 @@ footer p {
 
 
 
-/* MORE */
+
+
+
+
+
+/* MORE PAGE*/
 
 .moreHero {
-    margin-top: 80px;
+    margin-top: 125px;
     width: 100%;
     height: 500px;
-    background: url(img/premieMobile.png);
+    border-radius: 30px;
+    background: url(/img/premieMobile.png);
     background-size: cover;
     background-repeat: no-repeat;
     object-fit: cover;
@@ -1079,10 +1083,10 @@ footer p {
 .heroText {
     position: relative;
     left: 50%;
-    top: calc(50% - 20px);
-    height: 400px;
+    top: 50%;
+    height: 340px;
     transform: translate(-50%, -50%);
-    border-radius: 30px;
+    border-radius: 20px;
     backdrop-filter: blur(4px);
     width: 900px;
     background-color: #1b1b1b6c;
@@ -1120,7 +1124,7 @@ footer p {
 
 .moreIcons {
     background-color: var(--background2);
-    margin-top: -30px;
+    margin-top: 45px;
     border-radius: 30px;
     display: flex;
     justify-content: space-around;
@@ -1141,4 +1145,333 @@ footer p {
 
 .moreIcon {
     width: 110px;
+}
+
+.moreGridLayout {
+    margin-top: 200px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 800px;
+}
+
+.moreGridLayoutText {
+    margin-left: 40px;
+}
+
+.moreGridLayoutImg {
+    width: 550px;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.moreGridLayoutText h2 {
+    font-family: 'Gidugu';
+    font-size: 50px;
+    line-height: 40px;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.moreGridLayout li {
+    display: block;
+    padding: 15px 20px;
+    margin: 0;
+    margin-bottom: 12px;
+    background-color: var(--background2);
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.moreWho {
+    margin: 0;
+}
+
+.container {
+    width: calc(100% - 80px);
+    padding: 0;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.moreProgramsContainer {
+    margin-top: 200px;
+}
+
+.moreProgramsContainerTitle {
+    font-family: 'Gidugu';
+    width: 100%;
+    margin: 0;
+    font-size: 65px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    border-radius: 100px;
+    padding: 15px 23px;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: #00000044;
+}
+
+.swipper {
+    width: 100%;
+}
+
+.swiper-pagination {
+    position: absolute;
+    top: 50px;
+}
+
+.slider-wrapper {
+    overflow: hidden;
+    margin: 0 70px 55px;
+}
+
+.moreProgram {
+    display: grid;
+    width: 500px;
+    height: 620px;
+    margin: 0;
+    grid-template-columns: 100%;
+    grid-template-rows: 40% 60%;
+    background-color: #fff;
+    border-radius: 30px;
+}
+
+.moreProgram-text {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.moreProgram .moreTitle {
+    font-family: 'Gidugu';
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+    width: 95%;
+    margin-top: 30px;
+    margin-left: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+
+.moreDescription {
+    font-size: 16px;
+    margin: 0;
+    width: 90%;
+    text-align: center;
+}
+
+.moreMiniaturaMobile {
+    display: inline;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.moreProgram a{
+    padding: 15px 5px;
+    display: block;
+    background-color: var(--other);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: var(--font-size-paragraph-screen3);
+    width: 165px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    transition: .3s;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+}
+
+.moreProgram a:hover {
+    background-color: var(--navbar);
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.moreProgram a:active {
+    color: #000;
+    background-color: #ffffff;
+    border: 1px solid var(--other);
+}
+
+
+
+
+
+@media screen and (max-width: 1530px) {
+    .moreMain {
+        width: calc(100% - 80px);
+    }
+
+    .moreGridLayoutImg {
+        width: 420px;
+        height: 420px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .moreMain {
+        width: calc(100% - 40px);
+    }
+
+    .heroText {
+        width: 700px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .moreElement p {
+        margin-left: 20px;
+        margin-right: 20PX;
+    }
+
+    .moreGridLayoutImg {
+        width: 550px;
+        height: 550px;
+    }
+
+    .moreCenterGridImg {
+        display: none;
+    }
+
+    .moreGridLayoutText {
+        margin-left: 0;
+        width: 90%;
+    }
+
+    .moreGridLayout {
+        height: fit-content;
+        margin-top: 0;
+        grid-template-columns: 1fr;
+    }
+
+    .moreMoney {
+        margin-top: 200px;
+    }
+
+    .moreWho {
+        margin-top: 250px;
+    }
+
+    .moreOffer {
+        margin-top: 250px;
+        margin-bottom: 200px;
+    }
+
+    .moreProgramsContainerTitle {
+        margin-bottom: 30px;
+    }
+
+}
+
+@media screen and (max-width: 840px) {
+    .moreMain {
+        width: 100%;
+    }
+
+    .heroText {
+        width: 95%;
+    }
+
+    .moreElement {
+        flex-direction: column;
+        width: 200px;
+    }
+
+    .moreElement p {
+        margin: 40px 0;
+    }
+
+    .moreCenterGridImg {
+        grid-template-columns: 1fr;
+    }
+
+    .moreGridLayoutImg {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .moreHero {
+        height: 650px;
+    }
+
+    .heroText {
+        height: 550px;
+    }
+
+    .heroText h1 {
+        font-size: 70px;
+    }
+
+    .heroText p {
+        font-size: 16px;
+    }
+
+    .moreIconDescription {
+        text-align: center;
+        width: 100%;
+    }
+
+    .moreList {
+        padding-left: 0;
+    }
+
+    .moreGridLayout h2 {
+        font-size: 42px;
+        line-height: 35px;
+    }
+
+    .moreGridLayoutImg {
+        width: 85vw;
+        height: 85vw;
+    }
+
+    .moreProgramsContainer h1 {
+        font-size: 55px;
+    }
+
+    .moreProgram-text .moreTitle {
+        font-size: 45px;
+        line-height: 30px;
+    }
+
+    .moreProgram-text .moreDescription {
+        font-size: 15px;
+    }
+
+    .slider-wrapper {
+        overflow: hidden;
+        margin: 0 25px 50px
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .moreIcon {
+        width: 80px;
+    }
+
+    .moreElement p {
+        margin: 20px 0;
+        font-size: 14px;
+    }
 }
