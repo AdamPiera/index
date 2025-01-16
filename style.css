@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Gidugu&family=Inter:opsz,wght@14..32,100..900&display=swap');
 
 :root {
@@ -7,9 +8,9 @@
     --other: #15313d; */
     --hover: #d1dadd;
 
-    --background: #D3DAE2;
-    --background2: #C5CCCD;
-    --navbar: #e0e7e9;
+    --background: #dfe3e9;
+    --background2: #cbd2d3;
+    --navbar: #e5eaec;
     --other: #0d3241;
 
     --font-size-h1-screen: 75px;
@@ -21,6 +22,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-optical-sizing: auto;
 }
 
 body {
@@ -105,7 +107,7 @@ header ul a:active {
     padding-right: 150px;
 }
 
-.heroTextContainer h1{
+.heroTextContainer h2, h1{
     font-family: 'Gidugu';
     font-size: var(--font-size-h1-screen);
     line-height: 45px;
@@ -122,7 +124,7 @@ header ul a:active {
 }
 
 .aboutComapny {
-    background-image: url(img/dron.jpg);
+    background-image: url(webpImages/dron.webp);
     background-size: cover;
     background-position: 30% 50%;
     height: 500px;
@@ -382,7 +384,7 @@ input[type=submit]:active {
     z-index: 998;
 }
 
-.contactIds h2 {
+.contactIds h3 {
     font-family: 'Gidugu';
     font-size: var(--font-size-h2-screen);
     margin: 0;
@@ -424,9 +426,28 @@ input[type=submit]:active {
 }
 
 .item a {
+    text-decoration: none;
+    color: #000;
     margin-left: 30px;
     font-weight: 500;
     font-size: var(--font-size-paragraph-screen1);
+    transition: .2s;
+}
+
+.item a:hover {
+    text-decoration: underline;
+}
+
+.item a:active {
+    color: #5a5a5a;
+}
+
+.map {
+    height: 380px;
+    width: 420px;
+    border-radius: 22px;
+    margin-top: 100px;
+    margin-left: 80px;
 }
 
 footer {
@@ -434,7 +455,7 @@ footer {
     display: block;
     position: absolute;
     left: 0px;
-    bottom: -4600px;
+    bottom: -5150px;
     background-color: var(--other);
     color: #fff;
     text-align: center;
@@ -458,12 +479,12 @@ footer p {
     }
 
     footer {
-        bottom: -4600px;
+        bottom: -4800px;
     }
 }
 
 @media screen and (max-width: 1050px){
-    .heroTextContainer h1 {
+    .heroTextContainer h2, h1 {
         font-size: 50px;
         line-height: 35px;
     }
@@ -591,7 +612,7 @@ footer p {
         margin-bottom: 120px;
     }
 
-    .heroTextContainer h1 {
+    .heroTextContainer h2, h1 {
         font-size: 75px;
         line-height: 50px;
         text-align: center;
@@ -819,10 +840,7 @@ footer p {
 
     .miniatura {
         display: none;
-        background-image: url(img/premie2.png);
-        background-size: contain;
         height: 100%;
-        /* object-fit: cover; */
         max-width: 1000px;
         width: 100%;
     }
@@ -843,7 +861,7 @@ footer p {
         transform: translate(-50%);
     }
 
-    .contact h2 {
+    .contact h3 {
         width: 150px;
         text-align: center;
         position: relative;
@@ -871,6 +889,13 @@ footer p {
     .value {
         width: calc(100%-30px);
     }
+
+    .map {
+        margin-left: 0;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
 }
 
 @media screen and (max-width: 545px) {
@@ -883,7 +908,7 @@ footer p {
         padding-top: 180px;
     }
 
-    .heroTextContainer h1 {
+    .heroTextContainer h2, h1 {
         font-size: 50px;
         line-height: 38px;
         width: 95%;
@@ -892,7 +917,7 @@ footer p {
 
     .hero .text {
         margin-top: 0;
-        font-size: 16px;
+        font-size: 15px;
         line-height: 22px;
         width: 85%;
     }
@@ -1001,6 +1026,10 @@ footer p {
     footer p{
         font-size: 10px;
     }
+
+    .map {
+        width: 93%;
+    }
 }
 
 @media screen and (max-width: 375px) {
@@ -1072,7 +1101,7 @@ footer p {
     width: 100%;
     height: 500px;
     border-radius: 30px;
-    background: url(img/premieMobile.png);
+    background: url(webpImages/premieMobile.webp);
     background-size: cover;
     background-repeat: no-repeat;
     object-fit: cover;
@@ -1174,6 +1203,7 @@ footer p {
     font-family: 'Gidugu';
     font-size: 50px;
     line-height: 40px;
+    font-weight: 590;
     margin: 0;
     margin-bottom: 30px;
 }
@@ -1335,15 +1365,14 @@ footer p {
     .heroText {
         width: 700px;
     }
-}
 
-@media screen and (max-width: 1000px) {
     .moreElement p {
         margin-left: 20px;
         margin-right: 20PX;
     }
 
     .moreGridLayoutImg {
+        margin-top: 100px;
         width: 550px;
         height: 550px;
     }
@@ -1403,10 +1432,6 @@ footer p {
     .moreCenterGridImg {
         grid-template-columns: 1fr;
     }
-
-    .moreGridLayoutImg {
-        margin-top: 100px;
-    }
 }
 
 @media screen and (max-width: 620px) {
@@ -1456,6 +1481,12 @@ footer p {
 
     .moreProgram-text .moreDescription {
         font-size: 15px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+    border-radius: 100px;
+    padding: 10px 20px;
     }
 
     .slider-wrapper {
