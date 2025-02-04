@@ -1655,3 +1655,26 @@ footer p {
 .return-button-prog:hover {
     box-shadow: 2px 8px 25px #3d3d3d77;
 }
+
+.return-button-prog:hover {
+    box-shadow: 2px 8px 25px #3d3d3d77;
+}
+
+@media screen and (max-width: 400px) {
+    .return-button {
+        width: 107px;
+        margin-bottom: 45px;
+    }
+
+    .return-button-prog {
+        width: 162px;
+    }
+
+    .shown {
+        display: block;
+    }
+
+    .or {
+        font-size: 17px;
+    }
+}
