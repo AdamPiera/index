@@ -100,6 +100,8 @@ header ul a:active {
 .headerImg {
     width: 100%;
     border-radius: 30px;
+    height: 550px;
+    object-fit: cover;
 }
 
 .heroTextContainer {
@@ -124,7 +126,7 @@ header ul a:active {
 }
 
 .aboutComapny {
-    background-image: url(webpImages/dron.webp);
+    background-image: url(webpImages/about-v1.webp);
     background-size: cover;
     background-position: 30% 50%;
     height: 500px;
@@ -176,6 +178,18 @@ header ul a:active {
 
 .element {
     width: 150px;
+    height: 220px;
+    transition: .2s;
+    padding: 10px 15px;
+    margin: 0 10px;
+    border-radius: 20px;
+}
+
+.element:hover {
+    background-color: var(--background2);
+    padding: 15px 15px;
+    box-shadow: 0 0 30px #0000001a;
+    margin-top: 5px;
 }
 
 .icon {
@@ -183,14 +197,14 @@ header ul a:active {
     height: 110px;
     display: block;
     margin-left: 22px;
-    transition: .3s;
+    /* transition: .3s; */
 }
 
-.icon:hover {
+/* .icon:hover {
     width: 128px;
     height: 128px;
     margin-left: 15px;
-}
+} */
 
 .element p {
     font-size: var(--font-size-paragraph-screen1);
@@ -238,8 +252,6 @@ header ul a:active {
 
 .miniaturaMobile {
     display: none;
-    width: 0;
-    height: 0;
 }
 
 .miniatura-box {
@@ -261,9 +273,10 @@ header ul a:active {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    object-fit: cover;
 }
 
-.program:hover .miniatura {
+.program:hover .miniatura, .program:hover .miniaturaMobile {
     width: 100%;
     height: 100%;
 }
@@ -314,6 +327,7 @@ header ul a:active {
     color: #000;
     font-weight: 600;
     cursor: pointer;
+    box-shadow: 0 2px 45px #3f414270;
 }
 
 .program a:active {
@@ -399,6 +413,7 @@ input[type=submit]:hover {
     background-color: var(--hover);
     color: #000;
     cursor: pointer;
+    box-shadow: 0 0 25px #00000041;
 }
 
 input[type=submit]:active {
@@ -467,11 +482,11 @@ input[type=submit]:active {
 }
 
 .map {
-    height: 380px;
-    width: 420px;
+    height: 410px;
+    width: 480px;
     border-radius: 22px;
     margin-top: 100px;
-    margin-left: 80px;
+    margin-left: 30px;
 }
 
 footer {
@@ -507,9 +522,32 @@ footer p {
     }
 }
 
+@media screen and (max-width: 1214px) {
+    .icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        height: 600px;
+        position: relative;
+        margin-bottom: 100px;
+        transition: .3s;
+    }
+
+    .element {
+        margin-bottom: 20px;
+    }
+
+    .element:hover{
+        margin-top: 0;
+        position: relative;
+        top: 5px;
+    }
+ 
+}
+
 @media screen and (max-width: 1115px){
     .heroTextContainer h2, h1 {
-        font-size: 50px;
+        font-size: 55px;
         line-height: 35px;
     }
 
@@ -523,6 +561,10 @@ footer p {
         font-size: 18px;
     }
 
+    .headerImg {
+        height: 460px;
+    }
+
     .aboutH1 {
         font-size: 65px;
     }
@@ -532,15 +574,9 @@ footer p {
     }
 
     .icon {
-        width: 90px;
-        height: 90px;
-        margin-left: 35px;
-    }
-
-    .icon:hover {
-        width: 110px;
-        height: 110px;
-        margin-left: 25px;
+        width: 100px;
+        height: 100px;
+        margin-left: 30px;
     }
 
     .element p {
@@ -650,6 +686,7 @@ footer p {
 
     .headerImg {
         width: 70%;
+        height: 60vw;
         position: relative;
         left: 50%;
         transform: translate(-50%);
@@ -683,6 +720,11 @@ footer p {
         width: 80vw;
         z-index: -1;
         margin-bottom: 300px;
+    }
+
+    .element {
+        margin: 0;
+        padding: 0;
     }
 
     .program {
@@ -855,12 +897,30 @@ footer p {
         text-align: center;
     }
 
+    .miniatura-box {
+        display: none;
+    }
+
+    .miniatura-box-mobile {
+        display: inline;
+        overflow: hidden;
+        border-radius: 13px;
+    }
+
     .miniaturaMobile {
         display: inline;
-        height: 100%;
-        width: 100%;
+        height: 110%;
+        width: 110%;
         object-fit: cover;
         border-radius: 15px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, -25px);
+        transition: .2s;
+    }
+
+    .program:hover .miniaturaMobile {
+        transform: translate(-50%);
     }
 
     .miniatura {
@@ -868,7 +928,7 @@ footer p {
         height: 100%;
         max-width: 1000px;
         width: 100%;
-    }
+        }
 
     .item {
         margin-left: 50px;
@@ -996,6 +1056,14 @@ footer p {
         box-shadow: none;
     }
 
+    .miniatura-box-mobile {
+        height: 230px;
+    }
+
+    .miniaturaMobile {
+        height: 113%;
+    }
+
     .cennik h2 {
         font-size: 60px;
     }
@@ -1053,7 +1121,8 @@ footer p {
     }
 
     .map {
-        width: 93%;
+        width: 95%;
+        height: 100vw;
     }
 }
 
@@ -1126,8 +1195,9 @@ footer p {
     width: 100%;
     height: 500px;
     border-radius: 30px;
-    background: url(webpImages/premieMobile.webp);
+    background: url(webpImages/mobile/premie-v1-mobile.webp);
     background-size: cover;
+    background-position: 0 -180px;
     background-repeat: no-repeat;
     object-fit: cover;
     font-family: 'Gidugu';
