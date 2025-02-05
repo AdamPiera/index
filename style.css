@@ -84,6 +84,7 @@ header ul a {
 header ul a:hover {
     background-color: var(--other);
     color: #fff;
+    box-shadow: 0 3px 20px #00000063;
 }
 
 header ul a:active {
@@ -97,11 +98,28 @@ header ul a:active {
     padding: 220px 40px 0px 40px;
 }
 
-.headerImg {
-    width: 100%;
+.headerImgContainer {
+    overflow: hidden;
     border-radius: 30px;
-    height: 550px;
+    width: 100%;
+    height: 580px;
+}
+
+.headerImg {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 105%;
+    height: 105%;
     object-fit: cover;
+    transition: .3s;
+}
+
+.headerImg:hover {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .heroTextContainer {
@@ -177,6 +195,7 @@ header ul a:active {
 }
 
 .element {
+    position: relative;
     width: 150px;
     height: 220px;
     transition: .2s;
@@ -189,14 +208,16 @@ header ul a:active {
     background-color: var(--background2);
     padding: 15px 15px;
     box-shadow: 0 0 30px #0000001a;
-    margin-top: 5px;
+    margin-top: 45px;
+    width: 180px;
+    z-index: 20;
 }
 
 .icon {
     width: 110px;
     height: 110px;
     display: block;
-    margin-left: 22px;
+    margin: 0 auto;
     /* transition: .3s; */
 }
 
@@ -209,6 +230,8 @@ header ul a:active {
 .element p {
     font-size: var(--font-size-paragraph-screen1);
     line-height: 24px;
+    width: 130px;
+    margin: 20px auto;
     text-align: center;
     font-weight: 600;
 }
@@ -538,9 +561,7 @@ footer p {
     }
 
     .element:hover{
-        margin-top: 0;
-        position: relative;
-        top: 5px;
+        margin-top: 25px;
     }
  
 }
@@ -561,7 +582,7 @@ footer p {
         font-size: 18px;
     }
 
-    .headerImg {
+    .headerImgContainer {
         height: 460px;
     }
 
@@ -576,7 +597,7 @@ footer p {
     .icon {
         width: 100px;
         height: 100px;
-        margin-left: 30px;
+        margin: 0 auto;
     }
 
     .element p {
@@ -684,13 +705,10 @@ footer p {
         text-align: center;
     }
 
-    .headerImg {
-        width: 70%;
-        height: 480px;
-        position: relative;
-        left: 50%;
-        transform: translate(-50%);
-        z-index: -1;
+    .headerImgContainer {
+        width: 550px;
+        height: 520px;
+        margin: 0 auto;
     }
 
     .aboutComapny {
@@ -767,8 +785,9 @@ footer p {
         width: 100%;
     }
 
-    .headerImg {
-        width: 95%;
+    .headerImgContainer {
+        width: 100%;
+        height: 80vw;
     }
 
     .aboutComapny {
@@ -777,7 +796,7 @@ footer p {
 
     header {
         padding: 0;
-        height: 80px;
+        height: 70px;
     }
 
     header img {
@@ -785,7 +804,7 @@ footer p {
     }
 
     .dropdown {
-        padding-top: 10px;
+        padding-top: 30px;
         display: block;
         width: 100%;
         position: relative;
@@ -825,10 +844,10 @@ footer p {
 
     .menu {
         display: inline;
-        width: 40px;
-        height: 40px;
-        padding: 8px 10px;
-        margin-left: 25px;
+        width: 37px;
+        height: 37px;
+        padding: 0;
+        margin-left: 20px;
         transition: .2s;
         border-radius: 10px;
     }
@@ -1000,8 +1019,9 @@ footer p {
         margin-bottom: 12px;
     }
 
-    .headerImg {
-        height: 105vw;
+    .headerImgContainer {
+        width: 91vw;
+        height: 90vw;
     }
 
     .hero .text {
@@ -1201,7 +1221,6 @@ footer p {
     border-radius: 30px;
     background: url(webpImages/mobile/premie-v1-mobile.webp);
     background-size: cover;
-    background-position: 0 -180px;
     background-repeat: no-repeat;
     object-fit: cover;
     font-family: 'Gidugu';
@@ -1519,6 +1538,10 @@ footer p {
         width: 95%;
     }
 
+    .moreIcon {
+        width: 85px;
+    }
+
     .moreElement {
         flex-direction: column;
         width: 200px;
@@ -1535,7 +1558,8 @@ footer p {
 
 @media screen and (max-width: 620px) {
     .moreHero {
-        height: 650px;
+        height: 670px;
+        border-radius: 20px;
     }
 
     .heroText {
@@ -1596,7 +1620,11 @@ footer p {
 
 @media screen and (max-width: 520px) {
     .moreIcon {
-        width: 80px;
+        width: 70px;
+    }
+
+    .moreHero {
+        background-position: -120px;
     }
 
     .moreElement p {
@@ -1607,6 +1635,16 @@ footer p {
     .moreProgram-text a {
         font-size: 14px;
         margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .moreHero {
+        background-position: -220px;
+    }
+
+    .moreIcon {
+        width: 55px;
     }
 }
 
@@ -1703,9 +1741,9 @@ footer p {
     padding: 20px 0;
 }
 
-.return-button:hover {
+/* .return-button:hover {
     box-shadow: 2px 8px 30px #3d3d3da9;
-}
+} */
 
 .or {
     width: 100%;
@@ -1732,21 +1770,39 @@ footer p {
     transition: .3s;
 }
 
-.return-button-prog:hover {
-    box-shadow: 2px 8px 25px #3d3d3d77;
+.return-button-prog:hover, .return-button:hover{
+    box-shadow: 2px 2px 25px #3d3d3d77;
 }
 
 @media screen and (max-width: 400px) {
     .return-button {
         width: 107px;
         margin-bottom: 45px;
+        padding: 10px 15px;
+    }
+
+    .return-button::after {
+        left: -120px;
+    }
+
+    .return-button::before {
+        left: -30px;
     }
 
     .return-button-prog {
         width: 162px;
+        padding: 12px 14px;
     }
 
     .or {
-        font-size: 17px;
+        font-size: 15px;
+    }
+
+    .return-button-prog, .return-button {
+        font-size: 14px;
+    }
+
+    .return-button-prog:hover, .return-button:hover{
+        box-shadow: 2px 2px 18px #3d3d3d5e;
     }
 }
