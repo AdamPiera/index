@@ -686,7 +686,7 @@ footer p {
 
     .headerImg {
         width: 70%;
-        height: 60vw;
+        height: 480px;
         position: relative;
         left: 50%;
         transform: translate(-50%);
@@ -998,6 +998,10 @@ footer p {
         line-height: 38px;
         width: 95%;
         margin-bottom: 12px;
+    }
+
+    .headerImg {
+        height: 100vw;
     }
 
     .hero .text {
