@@ -71,6 +71,10 @@ body {
     margin: 0 auto;
 }
 
+img {
+    user-select: none;
+}
+
 
 /* ARROW UP */
 .arrow-up {
